@@ -7,24 +7,26 @@ class Movie {
     @SerializedName("release_date")
     var releaseDate: String? = null
 
-    @SerializedName("id")
     var id: Int = 0
 
-    @SerializedName("title")
     var title: String? = null
 
     @SerializedName("adult")
     var isAdult: Boolean = false
 
-    var poster_path : String ? = null
+    var poster_path: String? = null
+
+    var overview: String? = null
+    var vote_average: Float = 0.0f
 
     override fun toString(): String {
-        return """"Movie{ +
-                release_date = ${releaseDate.toString()}
-                ,id = ${id}
-                ,title = $title
-                ,adult = $isAdult
-                ,poster_path = $poster_path
+        return """"{release_date = ${releaseDate.toString()},
+            id = ${id},
+            title = $title,
+            adult = $isAdult,
+            poster_path = $poster_path,
+            overview = $overview,
+            vote_average = $vote_average
                 }"""
     }
 }
